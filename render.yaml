@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dtf-ai-service
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: REMOVEBG_KEY
+        sync: false
+      - key: REPLICATE_KEY
+        sync: false
+      - key: UPSCALE_MODEL
+        sync: false
+      - key: EDIT_MODEL
+        sync: false
